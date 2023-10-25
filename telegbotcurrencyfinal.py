@@ -3,14 +3,13 @@ import requests
 from telegram import Bot
 from telegram.constants import ParseMode
 from telegram.ext import CallbackContext
-#from telegram.utils.request import Request
+
 import time
 import asyncio
 
-# Your Telegram Bot Token
+
 BOT_TOKEN = '6371239450:AAEA78ktq6JEmuXvNnsUO4f7cqjEq7YDe4s'
 
-# Chat ID where you want to send notifications (you can obtain it from your bot)
 CHAT_ID = '458838320'
 
 async def get_currency(in_currency, out_currency):
@@ -34,7 +33,7 @@ async def send_currency_notification():
 async def main():
     while True:
         await send_currency_notification()
-        await asyncio.sleep(60)  # Wait for one minute before sending the next notification
+        await asyncio.sleep(60)  # Wait for one minute 
 
 if __name__ == "__main__":
     asyncio.run(main())
