@@ -27,5 +27,5 @@ if __name__ == "__main__":
             app_name="Currency Checker",
         )
         
-        # Wait for one minute (60 seconds) before sending the next notification
+        # Wait one minute before sending the next notification
         time.sleep(60)
